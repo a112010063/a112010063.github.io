@@ -16,7 +16,7 @@
         <link href="css/styles.css" rel="stylesheet" />
         <link href="css/mystyles.css" rel="stylesheet" />
         <style>
-  /* 唱片展示區塊的排版，使用 Flexbox 讓它們並排 */
+
   .records-container {
     display: flex;
     flex-wrap: wrap;
@@ -27,9 +27,8 @@
     font-family: sans-serif;
   }
 
-  /* 單張唱片的卡片設計 */
   .record-card {
-    width: 300px; /* 控制卡片寬度 */
+    width: 300px; 
     text-align: center;
     background-color: #f9f9f9;
     padding: 15px;
@@ -37,23 +36,20 @@
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   }
 
-  /* 確保圖片大小完全相同 */
   .record-image {
     width: 300px;
     height: 300px;
-    object-fit: cover; /* 讓圖片填滿且不變形 */
+    object-fit: cover; 
     border-radius: 8px;
   }
 
-  /* 歌手與歌曲名稱 (字體放大) */
   .record-title {
-    font-size: 1.5rem; /* 放大字體 */
+    font-size: 1.5rem; 
     font-weight: bold;
     margin: 15px 0 10px 0;
     color: #333;
   }
 
-  /* 歌曲介紹 */
   .record-intro {
     font-size: 1rem;
     color: #666;
@@ -62,7 +58,6 @@
     text-align: left;
   }
 
-  /* MV 連結按鈕樣式 */
   .record-link {
     display: inline-block;
     padding: 10px 20px;
@@ -76,12 +71,28 @@
   .record-link:hover {
     background-color: #b01b0b;
   }
+
+.social-icons {
+    display: flex;
+    justify-content: center;  
+    align-items: center;     
+    gap: 15px;            
+}
+
+.social-icon {
+    font-size: 32px;     
+    display: inline-flex;
+    transition: transform 0.2s ease; 
+}
+
+.social-icon:hover {
+    transform: scale(1.1);  
+}
 </style>
 <style>
-        /* 興趣區塊的整體樣式 */
         .interests-section {
             max-width: 1000px;
-            margin: 0 auto; /* 置中對齊 */
+            margin: 0 auto; 
             padding: 20px;
             font-family: 'Helvetica Neue', Arial, sans-serif;
             text-align: center;
@@ -103,14 +114,12 @@
             padding-bottom: 10px;
         }
 
-        /* 圖片網格排版：設定為水平三行，中間有空隙 */
         .image-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 切成均等的 3 個直行 */
-            gap: 20px; /* 圖片中間的小空隙 */
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 20px; 
         }
 
-        /* 單個圖片卡片的樣式 */
         .card {
             background-color: #f9f9f9;
             border-radius: 8px;
@@ -118,15 +127,13 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
 
-        /* 確保圖片大小一致、填滿容器且不變形 */
         .card img {
             width: 100%;
-            height: 250px; /* 你可以根據需求調整這個高度 */
-            object-fit: cover; /* 讓圖片按比例縮放並裁切，保持大小相同 */
+            height: 250px; 
+            object-fit: cover; 
             display: block;
         }
 
-        /* 圖片下方的說明文字 */
         .card p {
             margin: 10px 0;
             padding: 0 10px;
@@ -321,15 +328,15 @@
                     <div class="image-grid">
                         <div class="card">
                         <img src="assets/img/ph1.JPG" alt="攝影作品 1">
-                        <p>捕捉光影的瞬間</p>
+                        <p>捕捉古蹟美好的瞬間</p>
                     </div>
                     <div class="card">
                         <img src="assets/img/ph2.JPG" alt="攝影作品 2">
-                        <p>街頭人文紀實</p>
+                        <p>大自然風景紀實</p>
                     </div>
                     <div class="card">
                         <img src="assets/img/ph3.JPG" alt="攝影作品 3">
-                        <p>探索大自然的細節</p>
+                        <p>探索城市中的細節</p>
                     </div>
                 </div>
 
@@ -353,52 +360,22 @@
             <section class="resume-section" id="awards">
                 <div class="resume-section-content">
                     <h2 class="mb-5 karrycenter">即刻聯絡</h2>
-                    <!--
-                    <ul class="fa-ul mb-0">
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            Google Analytics Certified Developer
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            Mobile Web Specialist - Google Certification
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            1
-                            <sup>st</sup>
-                            Place - University of Colorado Boulder - Emerging Tech Competition 2009
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            1
-                            <sup>st</sup>
-                            Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            2
-                            <sup>nd</sup>
-                            Place - University of Colorado Boulder - Emerging Tech Competition 2008
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            1
-                            <sup>st</sup>
-                            Place - James Buchanan High School - Hackathon 2006
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            3
-                            <sup>rd</sup>
-                            Place - James Buchanan High School - Hackathon 2005
-                        </li>
-                    </ul>-->
-                    <div class="social-icons">
-                        <a class="social-icon" href="#!"><i class="fa-brands fa-instagram"></i></a>
-                        <a class="social-icon" href="#!"><i class="fa-brands fa-facebook-messenger"></i></a>
-                        <a class="social-icon" href="#!"><i class="fa-brands fa-square-facebook"></i></a>
-                        <a class="social-icon" href="#!"><i class="fa-brands fa-youtube"></i></a>
+                    <div class="social-icons"> 
+                        <a class="social-icon" href="https://www.instagram.com/你的帳號/" target="_blank"> 
+                            <i class="fa-brands fa-instagram"></i> 
+                        </a> 
+
+                        <a class="social-icon" href="https://m.me/你的Facebook帳號" target="_blank"> 
+                            <i class="fa-brands fa-facebook-messenger"></i> 
+                        </a> 
+
+                        <a class="social-icon" href="https://www.facebook.com/你的帳號" target="_blank"> 
+                            <i class="fa-brands fa-square-facebook"></i> 
+                        </a> 
+
+                        <a class="social-icon" href="https://www.youtube.com/@你的頻道帳號" target="_blank"> 
+                            <i class="fa-brands fa-youtube"></i> 
+                        </a> 
                     </div>
                 </div>
             </section>
