@@ -15,6 +15,125 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <link href="css/mystyles.css" rel="stylesheet" />
+        <style>
+  /* 唱片展示區塊的排版，使用 Flexbox 讓它們並排 */
+  .records-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    font-family: sans-serif;
+  }
+
+  /* 單張唱片的卡片設計 */
+  .record-card {
+    width: 300px; /* 控制卡片寬度 */
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  /* 確保圖片大小完全相同 */
+  .record-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover; /* 讓圖片填滿且不變形 */
+    border-radius: 8px;
+  }
+
+  /* 歌手與歌曲名稱 (字體放大) */
+  .record-title {
+    font-size: 1.5rem; /* 放大字體 */
+    font-weight: bold;
+    margin: 15px 0 10px 0;
+    color: #333;
+  }
+
+  /* 歌曲介紹 */
+  .record-intro {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    text-align: left;
+  }
+
+  /* MV 連結按鈕樣式 */
+  .record-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #d9230f;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+
+  .record-link:hover {
+    background-color: #b01b0b;
+  }
+</style>
+<style>
+        /* 興趣區塊的整體樣式 */
+        .interests-section {
+            max-width: 1000px;
+            margin: 0 auto; /* 置中對齊 */
+            padding: 20px;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            text-align: center;
+        }
+
+        .interests-section h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .interests-section h3 {
+            font-size: 22px;
+            color: #555;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            text-align: left;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        /* 圖片網格排版：設定為水平三行，中間有空隙 */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 切成均等的 3 個直行 */
+            gap: 20px; /* 圖片中間的小空隙 */
+        }
+
+        /* 單個圖片卡片的樣式 */
+        .card {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        /* 確保圖片大小一致、填滿容器且不變形 */
+        .card img {
+            width: 100%;
+            height: 250px; /* 你可以根據需求調整這個高度 */
+            object-fit: cover; /* 讓圖片按比例縮放並裁切，保持大小相同 */
+            display: block;
+        }
+
+        /* 圖片下方的說明文字 */
+        .card p {
+            margin: 10px 0;
+            padding: 0 10px;
+            font-size: 15px;
+            color: #666;
+        }
+    </style>
     </head>
     <body id="page-top">
         <!-- 網站選單 -->
@@ -29,7 +148,7 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">曾湘芸 Karry</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#school">教育經驗</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#work">工作經驗</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">最愛的唱片</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">即刻聯絡</a></li>
                 </ul>
@@ -111,26 +230,9 @@
                                     <td>10</td>
                                 </tr>
                             </table>
-                            <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">September 2021 - June 2024</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Junior Web Designer</h3>
-                            <div class="subheading mb-3">Shout! Media Productions</div>
-                            <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">July 2010 - December 2011</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Web Design Intern</h3>
-                            <div class="subheading mb-3">Shout! Media Productions</div>
-                            <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">September 2008 - June 2010</span></div>
-                    </div>
+                            
+                    </div> <div class="flex-shrink-0"><span class="text-primary">June 2021</span></div>
+                </div> <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                 </div>
             </section>
             <hr class="m-0" />
@@ -140,62 +242,74 @@
                     <h2 class="mb-5 karrycenter">工作經驗</h2>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">University of Colorado Boulder</h3>
-                            <div class="subheading mb-3">Bachelor of Science</div>
-                            <div>Computer Science - Web Development Track</div>
-                            <p>GPA: 3.23</p>
+                            <table class="table table-striped table-hover">
+                                <tr class="table-primary">
+                                    <th>名稱</th>
+                                    <th>喜愛程度</th>
+                                    <th>上班內容</th>
+                                    <th>上班資歷</th>
+                                </tr>
+                                <tr>
+                                    <td>名人坊</td>
+                                    <td><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></td>
+                                    <td>米其林二星餐廳，一道餐點都超貴，但只要你跟廚師混熟，他們都會偷偷餵食妳</td>
+                                    <td>六個月</td>
+                                </tr>
+                                <tr>
+                                    <td>OB嚴選</td>
+                                    <td><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></td>
+                                    <td>在東區的服飾店，上班的姊姊們人都很好，但不招暑假不在台北的工讀生</td>
+                                    <td>三個月</td>
+                                </tr>
+                                <tr>
+                                    <td>育達補習班</td>
+                                    <td><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></td>
+                                    <td>討厭數學但國中會考A 高中數學被當三年 後來果斷放棄</td>
+                                    <td>5</td>
+                                </tr>
+                                 <tr>
+                                    <td>文城周杰</td>
+                                    <td><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></td>
+                                    <td>也超級討厭自然 尤其是理化跟化學 完全聽不懂</td>
+                                    <td>沒考</td>
+                                </tr>
+                                 <tr>
+                                    <td>NET</td>
+                                    <td><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></td>
+                                    <td>非常喜歡歷史 每次上課都覺得是在聽故事 現在也還是很喜歡去各國看各國的歷史遺跡</td>
+                                    <td>10</td>
+                                </tr>
+                            </table>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">August 2006 - May 2010</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">James Buchanan High School</h3>
-                            <div class="subheading mb-3">Technology Magnet Program</div>
-                            <p>GPA: 3.56</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">August 2002 - May 2006</span></div>
-                    </div>
                 </div>
             </section>
             <hr class="m-0" />
             <!-- Skills-->
             <section class="resume-section" id="skills">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Skills</h2>
-                    <div class="subheading mb-3">Programming Languages & Tools</div>
-                    <ul class="list-inline dev-icons">
-                        <li class="list-inline-item"><i class="fab fa-html5"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-angular"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-react"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-node-js"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-sass"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-less"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-wordpress"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-gulp"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-grunt"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-npm"></i></li>
-                    </ul>
-                    <div class="subheading mb-3">Workflow</div>
-                    <ul class="fa-ul mb-0">
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Mobile-First, Responsive Design
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Cross Browser Testing & Debugging
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Cross Functional Teams
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Agile Development & Scrum
-                        </li>
-                    </ul>
+                    <h2 class="mb-5 karrycenter">最愛的唱片</h2>
+                    <div class="record-container d-flex justify-content-between gap-4">
+                        <div class="record-card">
+                            <img src="assets/img/taylov.jpeg" alt="Love Story" class="record-image">
+                            <div class="record-title">Taylor Swift ／ Love Story</div>
+                            <p class="record-intro">這是一首以羅密歐與茱麗葉為靈感的浪漫鄉村流行經典，唱出了不顧一切、最終迎來美好結局的愛情故事。</p>
+                            <a href="https://www.youtube.com/watch?v=uI0bFeBT6Uc" target="_blank" class="record-link">觀看 MV</a>
+                         </div>
+
+                        <div class="record-card">
+                            <img src="assets/img/edgla.jpeg" alt="Galway Girl" class="record-image">
+                            <div class="record-title">Ed Sheeran ／ Galway Girl</div>
+                            <p class="record-intro">完美融合了愛爾蘭傳統民謠與流行節奏，曲風輕快洗腦，生動描繪了在愛爾蘭高威市的浪漫邂逅。</p>
+                            <a href="https://www.youtube.com/watch?v=87gWaABqGYs" target="_blank" class="record-link">觀看 MV</a>
+                        </div>
+                        <div class="record-card">
+                            <img src="assets/img/tat.png" alt="That’s So True" class="record-image">
+                            <div class="record-title">Gracie Abrams ／ That’s So True</div>
+                            <p class="record-intro">充滿真誠與脆弱感的細膩之作，用獨特迷人的嗓音，直白地唱出在感情糾葛中的真實心聲與共鳴。</p>
+                            <a href="https://www.youtube.com/watch?v=YwJw3laCK-o" target="_blank" class="record-link">觀看 MV</a>
+                        </div>
+                    </div>
+
                 </div>
             </section>
             <hr class="m-0" />
@@ -203,8 +317,35 @@
             <section class="resume-section" id="interests">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Interests</h2>
-                    <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
-                    <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.</p>
+                    <h3>📷 攝影 Photography</h3>
+                    <div class="image-grid">
+                        <div class="card">
+                        <img src="assets/img/ph1.JPG" alt="攝影作品 1">
+                        <p>捕捉光影的瞬間</p>
+                    </div>
+                    <div class="card">
+                        <img src="assets/img/ph2.JPG" alt="攝影作品 2">
+                        <p>街頭人文紀實</p>
+                    </div>
+                    <div class="card">
+                        <img src="assets/img/ph3.JPG" alt="攝影作品 3">
+                        <p>探索大自然的細節</p>
+                    </div>
+                </div>
+
+                <h3>🍜 吃拉麵 Ramen Exploring</h3>
+                <div class="image-grid">
+                    <div class="card">
+                    <img src="assets/img/rm1.JPG" alt="拉麵 1">
+                    <p>濃郁的豚骨拉麵</p>
+                </div>
+                <div class="card">
+                    <img src="assets/img/rm2.JPG" alt="拉麵 2">
+                    <p>清爽的鹽味拉麵</p>
+                </div>
+                <div class="card">
+                    <img src="assets/img/rm3.JPG" alt="拉麵 3">
+                    <p>層次豐富的醬油拉麵</p>
                 </div>
             </section>
             <hr class="m-0" />
